@@ -38,7 +38,7 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "dev": "unbuild --stub",
+    "dev": "esno watch src/index.ts",
     "lint": "eslint .",
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
@@ -54,19 +54,14 @@
     "bumpp": "^9.1.1",
     "eslint": "^8.45.0",
     "esno": "^0.17.0",
-    "lint-staged": "^13.2.3",
     "pnpm": "^8.6.10",
     "rimraf": "^5.0.1",
-    "simple-git-hooks": "^2.9.0",
     "typescript": "^5.1.6",
     "unbuild": "^1.2.1",
     "vite": "^4.4.7",
     "vitest": "^0.33.0"
   },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*": "eslint --fix"
+  "dependencies": {
+    "@nimiq/core-web": "2.0.0-alpha.12"
   }
 }
